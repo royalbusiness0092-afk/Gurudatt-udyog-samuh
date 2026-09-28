@@ -28,7 +28,7 @@
         body {
             background-color: var(--bg-light);
             color: var(--text-dark);
-            padding-bottom: 80px;
+            padding-bottom: 90px;
         }
 
         /* Top Header */
@@ -47,11 +47,6 @@
             text-decoration: none;
         }
 
-        .social-icons a {
-            margin-left: 10px;
-            color: var(--white);
-        }
-
         /* Main Header */
         .main-header {
             background-color: var(--primary-orange);
@@ -60,93 +55,69 @@
             text-align: center;
             font-size: 20px;
             font-weight: bold;
-            letter-spacing: 1px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            position: relative;
         }
 
-        .notification-icon {
-            position: absolute;
-            right: 15px;
-            top: 15px;
-            font-size: 18px;
-            cursor: pointer;
-        }
-
-        /* New Modern Display Section */
+        /* Modern Display Banner */
         .display-card-banner {
             background: linear-gradient(135deg, #1e3c72, #2a5298);
             color: var(--white);
-            padding: 25px 20px;
+            padding: 20px;
             margin: 15px;
-            border-radius: 15px;
+            border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.15);
             text-align: center;
-            position: relative;
-            overflow: hidden;
         }
 
         .display-card-banner h2 {
             font-size: 22px;
             color: #ffca28;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
         }
 
-        .display-card-banner p {
-            font-size: 14px;
-            line-height: 1.5;
-            opacity: 0.95;
-        }
-
-        .service-badge-container {
+        /* Horizontal Menu Scroll */
+        .category-scroll {
             display: flex;
-            justify-content: center;
             gap: 10px;
-            margin-top: 15px;
-            flex-wrap: wrap;
-        }
-
-        .service-badge {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        /* Category Tabs */
-        .category-tabs {
-            display: flex;
-            justify-content: space-around;
-            background-color: var(--white);
-            padding: 10px;
-            margin: 0 15px 15px 15px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
             overflow-x: auto;
+            padding: 0 15px 15px 15px;
         }
 
-        .tab-btn {
+        .cat-btn {
+            background-color: var(--white);
+            color: var(--text-dark);
+            border: 1px solid #ddd;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            white-space: nowrap;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .cat-btn.active-cat {
             background-color: var(--primary-orange);
             color: var(--white);
-            padding: 8px 12px;
-            border: none;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-            white-space: nowrap;
-            margin: 0 4px;
-            font-size: 13px;
+            border-color: var(--primary-orange);
         }
 
-        /* Main Container */
+        /* Container & Cards */
         .container {
             padding: 0 15px;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
-        /* Card Component */
+        .section-title {
+            margin: 15px 0 10px 0;
+            font-size: 17px;
+            color: var(--primary-orange);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
         .card {
             background-color: var(--white);
             border-radius: 12px;
@@ -154,49 +125,87 @@
             margin-bottom: 15px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
             display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .card-header-box {
+            display: flex;
             align-items: center;
-            gap: 15px;
-            cursor: pointer;
+            gap: 12px;
         }
 
         .card-icon {
-            width: 60px;
-            height: 60px;
+            width: 45px;
+            height: 45px;
             border-radius: 10px;
             background-color: rgba(255, 87, 34, 0.1);
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--primary-orange);
-            font-size: 26px;
+            font-size: 20px;
             flex-shrink: 0;
-        }
-
-        .card-content {
-            flex: 1;
         }
 
         .card-title {
             font-size: 15px;
             font-weight: bold;
             color: var(--text-dark);
-            margin-bottom: 6px;
-            line-height: 1.4;
         }
 
-        .card-meta {
+        /* Document Box */
+        .doc-box {
+            background-color: #f8f9fa;
+            border-left: 3px solid var(--primary-orange);
+            padding: 8px 12px;
             font-size: 12px;
-            color: #777;
-            display: flex;
-            gap: 15px;
+            color: #555;
+            border-radius: 0 6px 6px 0;
         }
 
-        /* Contact Details Section */
+        .doc-box strong {
+            color: #222;
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        /* Direct Action Buttons */
+        .card-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 5px;
+        }
+
+        .action-btn {
+            flex: 1;
+            padding: 8px;
+            border-radius: 6px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .btn-portal {
+            background-color: #0d6efd;
+            color: white;
+        }
+
+        .btn-apply {
+            background-color: var(--green-btn);
+            color: white;
+        }
+
+        /* Contact Details Card */
         .contact-card {
             background-color: var(--white);
             border-radius: 12px;
-            padding: 20px;
-            margin-top: 15px;
+            padding: 18px;
             margin-bottom: 20px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
         }
@@ -204,83 +213,28 @@
         .info-row {
             display: flex;
             align-items: center;
-            gap: 15px;
-            padding: 12px 0;
+            gap: 12px;
+            padding: 10px 0;
             border-bottom: 1px solid #eee;
-        }
-
-        .info-row:last-child {
-            border-bottom: none;
-        }
-
-        .info-icon {
-            width: 35px;
-            height: 35px;
-            background-color: rgba(255, 87, 34, 0.1);
-            color: var(--primary-orange);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            flex-shrink: 0;
-        }
-
-        .info-text strong {
-            display: block;
             font-size: 13px;
-            color: #555;
         }
 
-        .info-text span, .info-text a {
-            font-size: 14px;
-            font-weight: bold;
-            color: var(--text-dark);
-            text-decoration: none;
-        }
-
-        /* Buttons */
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
             width: 100%;
-            padding: 12px;
+            padding: 10px;
             border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
             color: var(--white);
             margin-top: 10px;
-            text-align: center;
-            font-size: 14px;
+            font-size: 13px;
         }
 
-        .btn-whatsapp {
-            background-color: var(--green-btn);
-        }
-
-        .btn-call {
-            background-color: var(--blue-btn);
-        }
-
-        /* Powered By Footer */
-        .powered-by {
-            text-align: center;
-            padding: 20px 10px;
-            background-color: var(--dark-header);
-            color: var(--white);
-            font-size: 14px;
-            margin-top: 20px;
-        }
-
-        .powered-by span {
-            color: var(--primary-orange);
-            font-weight: bold;
-            text-transform: lowercase;
-        }
-
-        /* Bottom Fixed Navigation */
+        /* Fixed Bottom Navigation */
         .bottom-nav {
             position: fixed;
             bottom: 0;
@@ -299,8 +253,7 @@
             flex-direction: column;
             align-items: center;
             color: #666;
-            text-decoration: none;
-            font-size: 11px;
+            font-size: 10px;
             border: none;
             background: none;
             cursor: pointer;
@@ -309,7 +262,7 @@
 
         .nav-item i {
             font-size: 18px;
-            margin-bottom: 3px;
+            margin-bottom: 2px;
         }
 
         .nav-item.active {
@@ -317,7 +270,6 @@
             font-weight: bold;
         }
 
-        /* Section Visibility Toggle */
         .page-section {
             display: none;
         }
@@ -329,253 +281,238 @@
 </head>
 <body>
 
-    <!-- Top Social Bar -->
+    <!-- Top Bar -->
     <div class="top-bar">
         <span><a href="tel:+917058740092"><i class="fa-solid fa-phone"></i> +91 7058740092</a></span>
-        <div class="social-icons">
-            <a href="https://wa.me/919503670092" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="mailto:royalbusiness0092@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        <div>
+            <a href="https://wa.me/919503670092" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
         </div>
     </div>
 
     <!-- Main Header -->
     <div class="main-header">
         GURUDATT UDYOG SAMUH
-        <div class="notification-icon" onclick="alert('नवीन योजना अपडेट्स लवकरच येणार आहेत!')">
-            <i class="fa-solid fa-bell"></i>
-        </div>
     </div>
 
-    <!-- 1. HOME SECTION -->
-    <div id="home-section" class="page-section active-section">
-        <!-- New Display Banner -->
-        <div class="display-card-banner">
-            <h2>गुरुदत्त उद्योग समूह</h2>
-            <p>डिजिटल सेवेचे विश्वासू केंद्र | सर्व सरकारी व निमसरकारी कामे एकाच छताखाली</p>
-            <div class="service-badge-container">
-                <span class="service-badge">⚡ महाऑनलाइन</span>
-                <span class="service-badge">📜 सातबारा व दाखले</span>
-                <span class="service-badge">🚜 ई-पीक पाहणी</span>
-                <span class="service-badge">💳 पॅनकार्ड / आधार</span>
-            </div>
-        </div>
-
-        <!-- Category Tabs -->
-        <div class="category-tabs">
-            <button class="tab-btn" onclick="openNavTab('yojana-section', 1)">सर्व योजना लिस्ट</button>
-            <button class="tab-btn" onclick="openNavTab('center-section', 3)">महत्त्वपूर्ण माहिती</button>
-            <button class="tab-btn" onclick="openNavTab('news-section', 0)">ब्रेकिंग न्यूज</button>
-        </div>
-
-        <div class="container">
-            <h3 style="margin: 10px 0 12px 0; font-size: 17px;">नवीन अपडेट्स व योजना</h3>
-
-            <div class="card" onclick="alert('मुख्यमंत्री ग्रामीण पशुधन योजनेची माहिती...')">
-                <div class="card-icon"><i class="fa-solid fa-cow"></i></div>
-                <div class="card-content">
-                    <div class="card-title">मुख्यमंत्री ग्रामीण पशुधन उद्योजकता योजना ऑनलाईन अर्ज सुरू</div>
-                    <div class="card-meta">
-                        <span><i class="fa-solid fa-user"></i> Abhay Thombare</span>
-                        <span><i class="fa-solid fa-calendar"></i> Today</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card" onclick="alert('ई-पीक पाहणी अपडेट...')">
-                <div class="card-icon"><i class="fa-solid fa-wheat-awn"></i></div>
-                <div class="card-content">
-                    <div class="card-title">शेतकऱ्यांची कटकट मिटली! ई-पीक पाहणी मोबाईलवर करा</div>
-                    <div class="card-meta">
-                        <span><i class="fa-solid fa-user"></i> Abhay Thombare</span>
-                        <span><i class="fa-solid fa-calendar"></i> Yesterday</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card" onclick="alert('HSRP नंबर प्लेट माहिती...')">
-                <div class="card-icon"><i class="fa-solid fa-car"></i></div>
-                <div class="card-content">
-                    <div class="card-title">HSRP हाय सेक्युरिटी नंबर प्लेट बसवण्यासाठी ऑनलाईन अर्ज करा</div>
-                    <div class="card-meta">
-                        <span><i class="fa-solid fa-user"></i> Abhay Thombare</span>
-                        <span><i class="fa-solid fa-calendar"></i> Active</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Banner -->
+    <div class="display-card-banner">
+        <h2>गुरुदत्त उद्योग समूह - डिजिटल सेतू</h2>
+        <p>सर्व सरकारी दाखले, शेतकरी योजना, महाऑनलाइन व डिजिटल सेवा एकाच ठिकाणी!</p>
     </div>
 
-    <!-- 2. BREAKING NEWS SECTION -->
-    <div id="news-section" class="page-section container">
-        <h3 style="margin: 15px 0; color: var(--primary-orange);">📰 ब्रेकिंग न्यूज व महत्त्वाच्या बातम्या</h3>
+    <!-- Quick Filter Tabs -->
+    <div class="category-scroll">
+        <button class="cat-btn active-cat" onclick="openNavTab('home-section', 2)">🏠 सर्व सेवा</button>
+        <button class="cat-btn" onclick="openNavTab('mahaonline-section', 0)">📜 महाऑनलाइन / दाखले</button>
+        <button class="cat-btn" onclick="openNavTab('farmer-section', 1)">🚜 शेतकरी योजना</button>
+        <button class="cat-btn" onclick="openNavTab('student-section', 3)">🎓 विद्यार्थी सेन्टर</button>
+        <button class="cat-btn" onclick="openNavTab('center-section', 4)">🏪 माय सेंटर</button>
+    </div>
+
+    <!-- ================= 1. HOME SECTION ================= -->
+    <div id="home-section" class="page-section active-section container">
         
-        <div class="card" onclick="alert('शेतकरी कर्जमाफी यादी बातमी उघडत आहे...')">
-            <div class="card-icon"><i class="fa-solid fa-newspaper"></i></div>
-            <div class="card-content">
-                <div class="card-title">नुकसान भरपाई व पीक विमा निधी खात्यावर जमा होण्यास सुरुवात</div>
-                <div class="card-meta"><span><i class="fa-solid fa-clock"></i> 1 तास पूर्वी</span></div>
+        <div class="section-title"><i class="fa-solid fa-fire"></i> महत्त्वाच्या नवीन योजना</div>
+
+        <!-- Card 1 -->
+        <div class="card">
+            <div class="card-header-box">
+                <div class="card-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                <div class="card-title">मुख्यमंत्री माझी लाडकी बहीण योजना</div>
+            </div>
+            <div class="doc-box">
+                <strong>लागणारी कागदपत्रे:</strong> आधार कार्ड, बँक पासबुक, उत्पन्न दाखला / रेशन कार्ड, हमीपत्र.
+            </div>
+            <div class="card-actions">
+                <a href="https://ladakibahin.maharashtra.gov.in/" target="_blank" class="action-btn btn-portal"><i class="fa-solid fa-globe"></i> थेट पोर्टल लिंक</a>
+                <a href="https://wa.me/919503670092?text=मला लाडकी बहीण योजनेचा फॉर्म भरायचा आहे." target="_blank" class="action-btn btn-apply"><i class="fa-brands fa-whatsapp"></i> केंद्रात अर्ज करा</a>
             </div>
         </div>
 
-        <div class="card" onclick="alert('लाडकी बहीण हप्ता बातमी...')">
-            <div class="card-icon"><i class="fa-solid fa-bullhorn"></i></div>
-            <div class="card-content">
-                <div class="card-title">माझी लाडकी बहीण योजना - पुढील हप्त्याची तारीख जाहीर</div>
-                <div class="card-meta"><span><i class="fa-solid fa-clock"></i> आजची ताज्या बातमी</span></div>
+        <!-- Card 2 -->
+        <div class="card">
+            <div class="card-header-box">
+                <div class="card-icon"><i class="fa-solid fa-hammer"></i></div>
+                <div class="card-title">PM विश्वकर्मा योजना (रु. १५,००० टूलकिट)</div>
+            </div>
+            <div class="doc-box">
+                <strong>लागणारी कागदपत्रे:</strong> आधार कार्ड, मोबाईल नंबर (आधार लिंक), बँक पासबुक, रेशन कार्ड.
+            </div>
+            <div class="card-actions">
+                <a href="https://pmvishwakarma.gov.in/" target="_blank" class="action-btn btn-portal"><i class="fa-solid fa-globe"></i> PM Vishwakarma Portal</a>
+                <a href="https://wa.me/919503670092?text=मला PM विश्वकर्मा योजनेचा फॉर्म भरायचा आहे." target="_blank" class="action-btn btn-apply"><i class="fa-brands fa-whatsapp"></i> ऑनलाईन अर्ज करा</a>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <div class="card-header-box">
+                <div class="card-icon"><i class="fa-solid fa-id-card"></i></div>
+                <div class="card-title">नवीन पॅन कार्ड / पॅनकार्ड दुरुस्ती (PAN Card)</div>
+            </div>
+            <div class="doc-box">
+                <strong>लागणारी कागदपत्रे:</strong> आधार कार्ड, पासपोर्ट फोटो, सही, मोबाईल नंबर.
+            </div>
+            <div class="card-actions">
+                <a href="https://www.onlineservices.nsdl.com/paam/endUserRegisterContact.html" target="_blank" class="action-btn btn-portal"><i class="fa-solid fa-globe"></i> NSDL Portal</a>
+                <a href="https://wa.me/919503670092?text=मला नवीन पॅन कार्ड काढायचे आहे." target="_blank" class="action-btn btn-apply"><i class="fa-brands fa-whatsapp"></i> केंद्रातून बनवा</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ================= 2. MAHAONLINE / DAKHLE ================= -->
+    <div id="mahaonline-section" class="page-section container">
+        <div class="section-title"><i class="fa-solid fa-file-contract"></i> महाऑनलाइन व सर्व सरकारी दाखले</div>
+
+        <div class="card">
+            <div class="card-header-box">
+                <div class="card-icon"><i class="fa-solid fa-file-invoice"></i></div>
+                <div class="card-title">उत्पन्नाचा दाखला (Income Certificate)</div>
+            </div>
+            <div class="doc-box">
+                <strong>कागदपत्रे:</strong> रेशन कार्ड, आधार कार्ड, तलाठी उत्पन्न अहवाल, स्वयंघोषणा पत्र.
+            </div>
+            <div class="card-actions">
+                <a href="https://aaplesarkar.mahaonline.gov.in/" target="_blank" class="action-btn btn-portal"><i class="fa-solid fa-globe"></i> आपले सरकार पोर्टल</a>
+                <a href="https://wa.me/919503670092?text=मला उत्पन्नाचा दाखला काढायचा आहे." target="_blank" class="action-btn btn-apply"><i class="fa-brands fa-whatsapp"></i> अर्ज करा</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header-box">
+                <div class="card-icon"><i class="fa-solid fa-stamp"></i></div>
+                <div class="card-title">वय, अधिवास व रहिवासी दाखला (Domicile Certificate)</div>
+            </div>
+            <div class="doc-box">
+                <strong>कागदपत्रे:</strong> आधार कार्ड, टीसी (School Leaving), १० वर्षे रहिवासी पुरावा, रेशन कार्ड.
+            </div>
+            <div class="card-actions">
+                <a href="https://aaplesarkar.mahaonline.gov.in/" target="_blank" class="action-btn btn-portal"><i class="fa-solid fa-globe"></i> Aaple Sarkar Link</a>
+                <a href="https://wa.me/919503670092?text=मला डोमिसिल दाखला काढायचा आहे." target="_blank" class="action-btn btn-apply"><i class="fa-brands fa-whatsapp"></i> अर्ज करा</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header-box">
+                <div class="card-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                <div class="card-title">डिजिटल स्वाक्षरीचा ७/१२ व ८-अ (Digital 7/12)</div>
+            </div>
+            <div class="doc-box">
+                <strong>कागदपत्रे:</strong> खाते क्रमांक / गट क्रमांक व गाव नाव.
+            </div>
+            <div class="card-actions">
+                <a href="https://digitalsatbara.mahabhumi.gov.in/" target="_blank" class="action-btn btn-portal"><i class="fa-solid fa-globe"></i> Mahabhumi Portal</a>
+                <a href="https://wa.me/919503670092?text=मला ७/१२ उघडून हवा आहे." target="_blank" class="action-btn btn-apply"><i class="fa-brands fa-whatsapp"></i> WhatsApp वर मिळवा</a>
             </div>
         </div>
     </div>
 
-    <!-- 3. SARKARI YOJANA SECTION -->
-    <div id="yojana-section" class="page-section container">
-        <h3 style="margin: 15px 0; color: var(--primary-orange);">🏛️ सर्व सरकारी योजना</h3>
+    <!-- ================= 3. FARMER SCHEMES ================= -->
+    <div id="farmer-section" class="page-section container">
+        <div class="section-title"><i class="fa-solid fa-tractor"></i> शेतकरी योजना व सेवा</div>
 
-        <div class="card" onclick="alert('माझी लाडकी बहीण योजना अर्ज प्रक्रिया...')">
-            <div class="card-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
-            <div class="card-content">
-                <div class="card-title">मुख्यमंत्री माझी लाडकी बहीण योजना ऑनलाईन फॉर्म</div>
-                <div class="card-meta"><span><i class="fa-solid fa-circle-check" style="color: green;"></i> अर्ज सुरू</span></div>
+        <div class="card">
+            <div class="card-header-box">
+                <div class="card-icon"><i class="fa-solid fa-seedling"></i></div>
+                <div class="card-title">नमो शेतकरी महासन्मान / PM किसान सम्मान निधी</div>
+            </div>
+            <div class="doc-box">
+                <strong>कागदपत्रे:</strong> ७/१२ उतारा, आधार कार्ड, बँक पासबुक, e-KYC आवश्यक.
+            </div>
+            <div class="card-actions">
+                <a href="https://pmkisan.gov.in/" target="_blank" class="action-btn btn-portal"><i class="fa-solid fa-globe"></i> PM Kisan Portal</a>
+                <a href="https://wa.me/919503670092?text=माझे PM kisan हप्ते तपासायचे आहेत." target="_blank" class="action-btn btn-apply"><i class="fa-brands fa-whatsapp"></i> स्टेटस तपासा</a>
             </div>
         </div>
 
-        <div class="card" onclick="alert('नमो शेतकरी योजना माहिती...')">
-            <div class="card-icon"><i class="fa-solid fa-seedling"></i></div>
-            <div class="card-content">
-                <div class="card-title">नमो शेतकरी महासन्मान निधी योजना - हप्ता स्टेट्स तपासा</div>
-                <div class="card-meta"><span><i class="fa-solid fa-circle-check" style="color: green;"></i> ऑनलाईन स्टेट्स</span></div>
+        <div class="card">
+            <div class="card-header-box">
+                <div class="card-icon"><i class="fa-solid fa-wheat-awn"></i></div>
+                <div class="card-title">ई-पीक पाहणी (e-Pik Pahani) & पीक विमा</div>
             </div>
-        </div>
-
-        <div class="card" onclick="alert('PM विश्वकर्मा योजना माहिती...')">
-            <div class="card-icon"><i class="fa-solid fa-hammer"></i></div>
-            <div class="card-content">
-                <div class="card-title">PM विश्वकर्मा योजना - रु. १५,००० टूलकिट व कर्ज योजना</div>
-                <div class="card-meta"><span><i class="fa-solid fa-circle-check" style="color: green;"></i> नोंदणी सुरू</span></div>
+            <div class="doc-box">
+                <strong>कागदपत्रे:</strong> ७/१२, मोबाईल नंबर, पिकांचा तपशील, बँक पासबुक.
+            </div>
+            <div class="card-actions">
+                <a href="https://pmfby.gov.in/" target="_blank" class="action-btn btn-portal"><i class="fa-solid fa-globe"></i> Crop Insurance Portal</a>
+                <a href="https://wa.me/919503670092?text=मला पीक विमा किंवा ई-पीक पाहणीची मदत हवी आहे." target="_blank" class="action-btn btn-apply"><i class="fa-brands fa-whatsapp"></i> मदत मिळवा</a>
             </div>
         </div>
     </div>
 
-    <!-- 4. MY CENTER SECTION -->
+    <!-- ================= 4. STUDENT CENTER ================= -->
+    <div id="student-section" class="page-section container">
+        <div class="section-title"><i class="fa-solid fa-graduation-cap"></i> विद्यार्थी कॉर्नर व ऑनलाईन फॉर्म्स</div>
+
+        <div class="card">
+            <div class="card-header-box">
+                <div class="card-icon"><i class="fa-solid fa-award"></i></div>
+                <div class="card-title">महाडीबीटी शिष्यवृत्ती फॉर्म (MahaDBT Scholarship)</div>
+            </div>
+            <div class="doc-box">
+                <strong>कागदपत्रे:</strong> आधार कार्ड, जातीचा दाखला, उत्पन्नाचा दाखला, मार्कशीट, बँक पासबुक, कॉलेज पावती.
+            </div>
+            <div class="card-actions">
+                <a href="https://mahadbt.maharashtra.gov.in/" target="_blank" class="action-btn btn-portal"><i class="fa-solid fa-globe"></i> MahaDBT Portal</a>
+                <a href="https://wa.me/919503670092?text=मला स्कॉलरशिपचा फॉर्म भरायचा आहे." target="_blank" class="action-btn btn-apply"><i class="fa-brands fa-whatsapp"></i> फॉर्म भरा</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header-box">
+                <div class="card-icon"><i class="fa-solid fa-school"></i></div>
+                <div class="card-title">SSC / HSC बोर्ड निकाल व हॉल तिकीट</div>
+            </div>
+            <div class="doc-box">
+                <strong>माहिती:</strong> १० वी व १२ वी निकाल ऑनलाईन पाहणे व प्रिंट काढणे.
+            </div>
+            <div class="card-actions">
+                <a href="https://mahresult.nic.in/" target="_blank" class="action-btn btn-portal"><i class="fa-solid fa-globe"></i> Result Portal</a>
+                <a href="https://wa.me/919503670092?text=मला निकाल तपासायचा आहे." target="_blank" class="action-btn btn-apply"><i class="fa-brands fa-whatsapp"></i> निकाल मिळवा</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= 5. MY CENTER & CONTACT ================= -->
     <div id="center-section" class="page-section container">
         <div class="contact-card">
-            <h3 style="margin-bottom: 15px; color: var(--primary-orange); text-align: center;">🏪 माय सेंटर माहिती</h3>
+            <h3 style="margin-bottom: 12px; color: var(--primary-orange); text-align: center;">🏪 गुरुदत्त उद्योग समूह - माय सेंटर</h3>
             
             <div class="info-row">
-                <div class="info-icon"><i class="fa-solid fa-shop"></i></div>
-                <div class="info-text">
-                    <strong>सेंटरचे नाव</strong>
-                    <span>Gurudatt Udyog Samuh</span>
-                </div>
+                <i class="fa-solid fa-user-tie" style="color:var(--primary-orange)"></i>
+                <div><strong>संचालक:</strong> Abhay Thombare</div>
             </div>
 
             <div class="info-row">
-                <div class="info-icon"><i class="fa-solid fa-user"></i></div>
-                <div class="info-text">
-                    <strong>संचालकांचे नाव</strong>
-                    <span>Abhay Thombare</span>
-                </div>
+                <i class="fa-solid fa-location-dot" style="color:var(--primary-orange)"></i>
+                <div><strong>पत्ता:</strong> Pimpalsuti Nhavara Road, Near Hotel SP, Tal: Shirur, Dist: Pune - 412210</div>
             </div>
 
             <div class="info-row">
-                <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
-                <div class="info-text">
-                    <strong>संपूर्ण पत्ता</strong>
-                    <span>Pimpalsuti nhavara road near hotel sp tal shirur dist pune-412210</span>
-                </div>
+                <i class="fa-solid fa-envelope" style="color:var(--primary-orange)"></i>
+                <div><strong>ई-मेल:</strong> royalbusiness0092@gmail.com</div>
             </div>
 
             <div class="info-row">
-                <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
-                <div class="info-text">
-                    <strong>ई-मेल आयडी</strong>
-                    <span><a href="mailto:royalbusiness0092@gmail.com">royalbusiness0092@gmail.com</a></span>
-                </div>
+                <i class="fa-solid fa-phone" style="color:var(--primary-orange)"></i>
+                <div><strong>मोबाईल:</strong> 7058740092 / 9503670092</div>
             </div>
 
-            <div class="info-row">
-                <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
-                <div class="info-text">
-                    <strong>संपर्क क्रमांक</strong>
-                    <span><a href="tel:+917058740092">7058740092</a> / <a href="tel:+919503670092">9503670092</a></span>
-                </div>
-            </div>
-
-            <a href="https://wa.me/919503670092" target="_blank" class="btn btn-whatsapp">
+            <a href="https://wa.me/919503670092" target="_blank" class="btn" style="background-color: var(--green-btn);">
                 <i class="fa-brands fa-whatsapp"></i> WhatsApp Group Join करा
             </a>
 
-            <a href="tel:+917058740092" class="btn btn-call">
-                <i class="fa-solid fa-phone"></i> कॉल करा (+91 7058740092)
+            <a href="tel:+917058740092" class="btn" style="background-color: var(--blue-btn);">
+                <i class="fa-solid fa-phone"></i> थेट कॉल करा (+91 7058740092)
             </a>
         </div>
     </div>
 
-    <!-- 5. CONTACT SECTION -->
-    <div id="contact-section" class="page-section container">
-        <div class="contact-card" style="text-align: center;">
-            <h3 style="margin-bottom: 15px; color: var(--primary-orange);">🎧 संपर्क करा</h3>
-            <p style="margin-bottom: 15px; font-size: 14px; color: #555;">कोणत्याही ऑनलाईन सेवेसाठी किंवा दाखल्यांसाठी आमच्याशी थेट संपर्क साधा.</p>
-            
-            <a href="tel:+917058740092" class="btn btn-call" style="margin-bottom: 10px;">
-                <i class="fa-solid fa-phone"></i> कॉल: 7058740092
-            </a>
-            <a href="tel:+919503670092" class="btn btn-call" style="margin-bottom: 10px; background-color: #333;">
-                <i class="fa-solid fa-phone"></i> कॉल: 9503670092
-            </a>
-            <a href="https://wa.me/919503670092" target="_blank" class="btn btn-whatsapp">
-                <i class="fa-brands fa-whatsapp"></i> WhatsApp वर चॅट करा
-            </a>
-        </div>
-    </div>
-
-    <!-- Powered By Footer -->
-    <div class="powered-by">
-        Powered By <span>mahaseva digital</span>
-    </div>
-
-    <!-- Bottom Fixed Navigation -->
+    <!-- Bottom Navigation Bar -->
     <div class="bottom-nav">
-        <button class="nav-item" onclick="openNavTab('news-section', 0)">
-            <i class="fa-solid fa-newspaper"></i>
-            <span>ब्रेकिंग न्यूज</span>
+        <button class="nav-item" onclick="openNavTab('mahaonline-section', 0)">
+            <i class="fa-solid fa-file-invoice"></i>
+            <span>महाऑनलाइन</span>
         </button>
-        <button class="nav-item" onclick="openNavTab('yojana-section', 1)">
-            <i class="fa-solid fa-building-columns"></i>
-            <span>सरकारी योजना</span>
-        </button>
-        <button class="nav-item active" onclick="openNavTab('home-section', 2)">
-            <i class="fa-solid fa-house"></i>
-            <span>होम</span>
-        </button>
-        <button class="nav-item" onclick="openNavTab('center-section', 3)">
-            <i class="fa-solid fa-store"></i>
-            <span>माय सेंटर</span>
-        </button>
-        <button class="nav-item" onclick="openNavTab('contact-section', 4)">
-            <i class="fa-solid fa-headset"></i>
-            <span>संपर्क</span>
-        </button>
-    </div>
-
-    <script>
-        function openNavTab(sectionId, tabIndex) {
-            // Hide all sections
-            let sections = document.querySelectorAll('.page-section');
-            sections.forEach(sec => sec.classList.remove('active-section'));
-
-            // Show selected section
-            document.getElementById(sectionId).classList.add('active-section');
-
-            // Update bottom nav icons active style
-            let navItems = document.querySelectorAll('.bottom-nav .nav-item');
-            navItems.forEach(item => item.classList.remove('active'));
-            if(navItems[tabIndex]) {
-                navItems[tabIndex].classList.add('active');
-            }
-
-            // Scroll to top
-            window.scrollTo(0, 0);
-        }
-    </script>
-</body>
-</html>
+        <button class="nav-item" onclick="openNavTab('farmer-se
