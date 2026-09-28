@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gurudatt Udyog Samuh - MahaSeva Digital</title>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-orange: #ff5722;
+            --secondary-orange: #e64a19;
+            --dark-header: #1a1a1a;
+            --bg-light: #f4f6f9;
+            --text-dark: #333333;
+            --white: #ffffff;
+            --green-btn: #25d366;
+            --blue-btn: #1e3c72;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            padding-bottom: 70px; /* Space for bottom nav */
+        }
+
+        /* Top Header */
+        .top-bar {
+            background-color: var(--dark-header);
+            color: var(--white);
+            padding: 8px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .social-icons a {
+            color: var(--white);
+            margin-left: 10px;
+            text-decoration: none;
+        }
+
+        /* Main Header */
+        .main-header {
+            background-color: var(--primary-orange);
+            color: var(--white);
+            padding: 15px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            position: relative;
+        }
+
+        .notification-icon {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 20px;
+        }
+
+        /* Hero Banner Section */
+        .hero-section {
+            background: linear-gradient(135deg, #ff7043, #ff5722);
+            color: var(--white);
+            padding: 25px 15px;
+            text-align: center;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .hero-section h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .hero-section p {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+
+        /* Category Tabs */
+        .category-tabs {
+            display: flex;
+            justify-content: space-around;
+            background-color: var(--white);
+            padding: 10px;
+            margin: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            overflow-x: auto;
+        }
+
+        .tab-btn {
+            background-color: var(--primary-orange);
+            color: var(--white);
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            white-space: nowrap;
+            margin: 0 5px;
+        }
+
+        /* Main Container */
+        .container {
+            padding: 15px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Card Component */
+        .card {
+            background-color: var(--white);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .card-img {
+            width: 90px;
+            height: 90px;
+            border-radius: 8px;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+
+        .card-content {
+            flex: 1;
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .card-meta {
+            font-size: 12px;
+            color: #777;
+            display: flex;
+            gap: 15px;
+        }
+
+        /* Contact Details Section */
+        .contact-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .info-row {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        .info-icon {
+            width: 35px;
+            height: 35px;
+            background-color: rgba(255, 87, 34, 0.1);
+            color: var(--primary-orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+
+        .info-text strong {
+            display: block;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .info-text span {
+            font-size: 15px;
+            font-weight: bold;
+            color: var(--text-dark);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            color: var(--white);
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .btn-whatsapp {
+            background-color: var(--green-btn);
+        }
+
+        .btn-call {
+            background-color: var(--blue-btn);
+        }
+
+        /* Powered By Footer */
+        .powered-by {
+            text-align: center;
+            padding: 20px 10px;
+            background-color: var(--dark-header);
+            color: var(--white);
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        .powered-by span {
+            color: var(--primary-orange);
+            font-weight: bold;
+        }
+
+        /* Bottom Fixed Navigation */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--white);
+            display: flex;
+            justify-content: space-around;
+            padding: 8px 0;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #666;
+            text-decoration: none;
+            font-size: 11px;
+        }
+
+        .nav-item i {
+            font-size: 18px;
+            margin-bottom: 3px;
+        }
+
+        .nav-item.active {
+            color: var(--primary-orange);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Social Bar -->
+    <div class="top-bar">
+        <span><i class="fa-solid fa-phone"></i> +91 9860092911</span>
+        <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <div class="main-header">
+        GURUDATT UDYOG SAMUH
+        <div class="notification-icon">
+            <i class="fa-solid fa-bell"></i>
+        </div>
+    </div>
+
+    <!-- Hero Banner -->
+    <div class="hero-section">
+        <h1>सर्व सरकारी योजना व ऑनलाईन सेवा उपलब्ध</h1>
+        <p>केंद्र एक, सेवा अनेक - गुरुदत्त उद्योग समूह</p>
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="category-tabs">
+        <button class="tab-btn">सर्व योजना लिस्ट</button>
+        <button class="tab-btn">महत्त्वपूर्ण माहिती</button>
+        <button class="tab-btn">ब्रेकिंग न्यूज</button>
+    </div>
+
+    <div class="container">
+
+        <!-- Center Contact Card -->
+        <div class="contact-card">
+            <h3 style="margin-bottom: 15px; color: var(--primary-orange); text-align: center;">माय सेंटर माहिती</h3>
+            
+            <div class="info-row">
+                <div class="info-icon"><i class="fa-solid fa-user"></i></div>
+                <div class="info-text">
+                    <strong>संचालकांचे नाव</strong>
+                    <span>Abhay Thombare</span>
+                </div>
+            </div>
+
+            <div class="info-row">
+                <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="info-text">
+                    <strong>पत्ता</strong>
+                    <span>Pimpalsuti nhavara road near hotel sp tal shirur dist pune-412210</span>
+                </div>
+            </div>
+
+            <div class="info-row">
+                <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="info-text">
+                    <strong>ई-मेल</strong>
+                    <span>royalbusiness0092@gmail.com</span>
+                </div>
+            </div>
+
+            <a href="https://wa.me/919860092911" class="btn btn-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp Group Join करा
+            </a>
+
+            <a href="tel:+919860092911" class="btn btn-call">
+                <i class="fa-solid fa-phone"></i> कॉल करा (+91 9860092911)
+            </a>
+        </div>
+
+        <!-- Latest Updates Section -->
+        <h3 style="margin: 20px 0 10px 0; font-size: 18px;">नवीन अपडेट्स व योजना</h3>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/90" alt="News" class="card-img">
+            <div class="card-content">
+                <div class="card-title">मुख्यमंत्री ग्रामीण पशुधन उद्योजकता योजना ऑनलाईन अर्ज सुरू</div>
+                <div class="card-meta">
+                    <span><i class="fa-solid fa-user"></i> Abhay Thombare</span>
+                    <span><i class="fa-solid fa-calendar"></i> Today</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/90" alt="News" class="card-img">
+            <div class="card-content">
+                <div class="card-title">शेतकऱ्यांची कटकट मिटली! ई-पीक पाहणी मोबाईलवर करा</div>
+                <div class="card-meta">
+                    <span><i class="fa-solid fa-user"></i> Abhay Thombare</span>
+                    <span><i class="fa-solid fa-calendar"></i> Yesterday</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Powered By Footer -->
+    <div class="powered-by">
+        Powered By <span>mahaseva digital</span>
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <div class="bottom-nav">
+        <a href="#" class="nav-item">
+            <i class="fa-solid fa-newspaper"></i>
+            <span>ब्रेकिंग न्यूज</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fa-solid fa-building-columns"></i>
+            <span>सरकारी योजना</span>
+        </a>
+        <a href="#" class="nav-item active">
+            <i class="fa-solid fa-house"></i>
+            <span>होम</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fa-solid fa-store"></i>
+            <span>माय सेंटर</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fa-solid fa-headset"></i>
+            <span>संपर्क</span>
+        </a>
+    </div>
+
+</body>
+</html>
