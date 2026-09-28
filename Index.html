@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gurudatt Udyog Samuh - MahaSeva Digital Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #ff5722;
+            --dark: #1f2937;
+            --bg: #f3f4f6;
+            --card-bg: #ffffff;
+            --green: #25d366;
+            --blue: #2563eb;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: #333;
+            padding-bottom: 90px;
+        }
+
+        .top-bar {
+            background-color: var(--dark);
+            color: #fff;
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+        }
+
+        .top-bar a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .main-header {
+            background-color: var(--primary);
+            color: #fff;
+            padding: 18px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .banner {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
+            padding: 22px 15px;
+            margin: 15px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .banner h2 {
+            color: #ffca28;
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        .container {
+            padding: 0 15px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            background-color: var(--dark);
+            color: #fff;
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin: 25px 0 15px 0;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--primary);
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #111;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .doc-box {
+            background-color: #f9fafb;
+            border: 1px solid #e5e7eb;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 13px;
+            color: #4b5563;
+            margin-bottom: 10px;
+        }
+
+        .doc-box strong {
+            color: #1f2937;
+        }
+
+        .actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-link {
+            flex: 1;
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: bold;
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .portal-btn { background-color: var(--blue); }
+        .apply-btn { background-color: var(--green); }
+
+        .contact-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .contact-row {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .fixed-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+
+        .footer-btn {
+            text-decoration: none;
+            color: #555;
+            font-size: 11px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <a href="tel:+917058740092"><i class="fa-solid fa-phone"></i> +91 7058740092</a>
+        <a href="https://wa.me/919503670092" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+    </div>
+
+    <div class="main-header">
+        GURUDATT UDYOG SAMUH
+    </div>
+
+    <div class="banner">
+        <h2>गुरुदत्त उद्योग समूह - डिजिटल सेवा केंद्र</h2>
+        <p>महाराष्ट्र शासन व केंद्र सरकारच्या सर्व योजना, ऑनलाईन फॉर्म्स आणि दाखले एकाच ठिकाणी!</p>
+    </div>
+
+    <div class="container">
+
+        <!-- ================= SECTION 1: MAHASEVA & DAKHLE ================= -->
+        <div class="section-header"><i class="fa-solid fa-file-signature"></i> ১. महाऑनलाइन व शासकीय दाखले</div>
+
+        <div class="card">
+            <div class="card-title"><i class="fa-solid fa-file-invoice"></i> उत्पन्नाचा दाखला (Income Certificate - 1 & 3 Year)</div>
+            <div class="doc-box"><strong>लागणारी कागदपत्रे:</strong> आधार कार्ड, रेशन कार्ड, तलाठी उत्पन्न अहवाल, पासपोर्ट फोटो, स्वयंघोषणा पत्र.</div>
+            <div class="actions">
+                <a href="https://aaplesarkar.mahaonline.gov.in/" target="_blank" class="btn-link portal-btn"><i class="fa-solid fa-globe"></i> Direct Portal Link</a>
+                <a href="https://wa.me/919503670092?text=मला उत्पन्नाचा दाखला काढायचा आहे." target="_blank" class="btn-link apply-btn"><i class="fa-brands fa-whatsapp"></i> अर्ज करा</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title"><i class="fa-solid fa-house-user"></i> वय, अधिवास व रहिवासी दाखला (Domicile & Nationality)</div>
+            <div class="doc-box"><strong>लागणारी कागदपत्रे:</strong> आधार कार्ड, टीसी (School Leaving), १० वर्षे रहिवासी पुरावा, रेशन कार्ड, फोटो.</div>
+            <div class="actions">
+                <a href="https://aaplesarkar.mahaonline.gov.in/" target="_blank" class="btn-link portal-btn"><i class="fa-solid fa-globe"></i> Direct Portal Link</a>
+                <a href="https://wa.me/919503670092?text=मला डोमिसिल दाखला काढायचा आहे." target="_blank" class="btn-link apply-btn"><i class="fa-brands fa-whatsapp"></i> अर्ज करा</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title"><i class="fa-solid fa-users"></i> जातीचा दाखला (Caste Certificate)</div>
+            <div class="doc-box"><strong>लागणारी कागदपत्रे:</strong> आधार कार्ड, शाळा सोडल्याचा दाखला (TC), वडिलांचा/आजोबांचा १९६१/१९६७ चा पुरावा, रेशन कार्ड.</div>
+            <div class="actions">
+                <a href="https://aaplesarkar.mahaonline.gov.in/" target="_blank" class="btn-link portal-btn"><i class="fa-solid fa-globe"></i> Direct Portal Link</a>
+                <a href="https://wa.me/919503670092?text=मला जातीचा दाखला काढायचा आहे." target="_blank" class="btn-link apply-btn"><i class="fa-brands fa-whatsapp"></i> अर्ज करा</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title"><i class="fa-solid fa-certificate"></i> नॉन-क्रिमीलेयर दाखला (Non-Creamy Layer)</div>
+            <div class="doc-box"><strong>लागणारी कागदपत्रे:</strong> जातीचा दाखला, ३ वर्षांचा उत्पन्नाचा दाखला, आधार कार्ड, शाळा सोडल्याचा दाखला.</div>
+            <div class="actions">
+                <a href="https://aaplesarkar.mahaonline.gov.in/" target="_blank" class="btn-link portal-btn"><i class="fa-solid fa-globe"></i> Direct Portal Link</a>
+                <a href="https://wa.me/919503670092?text=मला नॉन-क्रिमीलेयर दाखला काढायचा आहे." target="_blank" class="btn-link apply-btn"><i class="fa-brands fa-whatsapp"></i> अर्ज करा</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title"><i class="fa-solid fa-map"></i> डिजिटल ७/१२, ८-अ व फेरफार (Digital Satbara)</div>
+            <div class="doc-box"><strong>लागणारी कागदपत्रे:</strong> गट क्रमांक / खाते क्रमांक / नाव व गावाचे नाव.</div>
+            <div class="actions">
+                <a href="https://digitalsatbara.mahabhumi.gov.in/" target="_blank" class="btn-link portal-btn"><i class="fa-solid fa-globe"></i> Mahabhumi Portal Link</a>
+                <a href="https://wa.me/919503670092?text=मला डिजिटल ७/१२ हवा आहे." target="_blank" class="btn-link apply-btn"><i class="fa-brands fa-whatsapp"></i> WhatsApp वर मिळवा</a>
+            </div>
+        </div>
+
+        <!-- ================= SECTION 2: AADHAR & PAN CARD ================= -->
+        <div class="section-header"><i class="fa-solid fa-address-card"></i> २. आधार, पॅन कार्ड व ओळखपत्रे</div>
+
+        <div class="card">
+            <div class="card-title"><i class="fa-solid fa-id-card"></i> नवीन पॅन कार्ड / पॅन कार्ड दुरुस्ती (PAN Card)</div>
+            <div class="doc-box"><strong>लागणारी कागदपत्रे:</strong> आधार कार्ड, २ पासपोर्ट फोटो, सही, आधारशी लिंक असलेला मोबाईल नंबर.</div>
+            <div class="actions">
+                <a href="https://www.onlineservices.nsdl.com/" target="_blank" class="btn-link portal-btn"><i class="fa-solid fa-globe"></i> NSDL PAN Portal</a>
+                <a href="https://wa.me/919503670092?text=मला पॅन कार्ड बनवायचे / दुरुस्त करायचे आहे." target="_blank" class="btn-link apply-btn"><i class="fa-brands fa-whatsapp"></i> अर्ज करा</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title"><i class="fa-solid fa-fingerprint"></i> आधार कार्ड अपडेट / ई-आधार डाऊनलोड (UIDAI)</div>
+            <div class="doc-box"><strong>लागणारी कागदपत्रे:</strong> आधार नंबर, आधारशी लिंक मोबाईल नंबर (OTP साठी).</div>
+            <div class="actions">
+                <a href="https://myaadhaar.uidai.gov.in/" target="_blank" class="btn-link portal-btn"><i class="fa-solid fa-globe"></i> UIDAI Official Link</a>
+                <a href="https://wa.me/919503670092?text=मला आधार डाऊनलोड / अपडेट करायचे आहे." target="_blank" class="btn-link apply-btn"><i class="fa-brands fa-whatsapp"></i> मदत मिळवा</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title"><i class="fa-solid fa-check-to-slot"></i> नवीन मतदार ओळखपत्र / दुरुस्ती (Voter ID Card)</div>
+            <div class="doc-box"><strong>लागणारी कागदपत्रे:</strong> आधार कार्ड, फोटो, वयाचा पुरावा, रहिवासी पुरावा (वय १८ वर्षे पूर्ण).</div>
+            <div class="actions">
+                <a href="https://voters.eci.gov.in/" target="_blank" class="btn-link portal-btn"><i class="fa-solid fa-globe"></i> Voters Portal Link</a>
+                <a href="https://wa.me/919503670092?text=मला मतदार कार्ड काढायचे आहे." target="_blank" class="btn-link apply-btn"><i class="fa-brands fa-whatsapp"></i> अर्ज करा</a>
+            </div>
+        </div>
+
+        <!-- ================= SECTION 3: FARMER SCHEMES ================= -->
+        <div class="section-header"><i class="fa-solid fa-tractor"></i> ३. शेतकरी योजना (Farmer Schemes)</div>
+
+        <div class="card">
+            <div class="card-title"><i class="fa-solid fa-seedling"></i> PM किसान सम्मान निधी / नमो शेतकरी योजना</div>
+            <div class="doc-box"><strong>लागणारी कागदपत्रे:</strong> ७/१२ उतारा, आधार कार्ड, बँक पासबुक, आधार लिंक मोबाईल, e-KYC.</div>
+            <div class="actions">
+                <a href="https://pmkisan.gov.in/" target="_blank" class="btn-link portal-btn"><i class="fa-solid fa-globe"></i> PM Kisan Link</a>
+                <a href="https://wa.me/919503670092?text=माझे PM किसानचे हफ्ते तपासायचे आहेत." target="_blank" class="btn-link apply-btn"><i class="fa-brands fa-whatsapp"></i> स्टेटस तपासा</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title"><i class="fa-solid fa-cloud-sun-rain"></i> प्रधानमंत्री पीक विमा योजना & ई-पीक पाहणी</div>
+            <div class="doc-box"><strong>लागणारी कागदपत्रे:</strong> ७/१२, ८-अ, पेरणी प्रमाणपत्र, बँक पासबुक, आधार कार्ड.</div>
+            <div class="actions">
+                <a href="https://pmfby.gov.in/" target="_blank" class="action-btn btn-link portal-btn"><i class="fa-solid fa-globe"></i> Crop Insurance Portal</a>
+                <a href="https://wa.me/919503670092?text=मला पीक विमा अर्ज करायचा आहे." target="_blank" class="btn-link apply-btn"><i class="fa-brands fa-whatsapp"></i> फॉर्म भरा</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title"><i class="fa-solid fa-water"></i> मागेल त्याला शेततळे / कुसुम सोलर पंप योजना</div>
+            <div class="doc-box"><strong>लागणारी कागदपत्रे:</strong> ७/१२, ८-अ, जातीचा दाखला (लागू असल्यास), आधार कार्ड, बँक पासबुक.</div>
+            <div class="actions">
+                <a href="https://mahadbt.maharashtra.gov.in/Farmer/FarmerMahaDBT" target="_blank" class="btn-link portal-btn"><i class="fa-solid fa-globe"></i> Mahadbt Farmer Link</a>
+                <a href="https://wa.me/919503670092?text=मला सोलर पंप / शेततळे अर्ज करायचा आहे." target="_blank" class="btn-link apply-btn"><i class="fa-brands fa-whatsapp"></i> अर्ज करा</a>
+            </div>
+        </div>
+
+        <!-- ================= SECTION 4: NEW GOVT SCHEMES ================= -->
+        <div class="section-header"><i class="fa-solid fa-gift"></i> ४. महाराष्ट्रातील नवीन प्रमुख सरकारी योजना</div>
+
+        <div class="card">
+            <div class="card-title"><i class="fa-solid fa-hand-holding-heart"></i> मुख्यमंत्री माझी लाडकी बहीण योजना</div>
+            <div class="doc-box"><strong>लागणारी कागदपत्रे:</strong> आधार कार्ड, बँक पासबुक, उत्पन्न दाखला / पिवळे-केशरी रेशन कार्ड, हमीपत्र.</div>
+            <div class="actions">
+                <a href="https://ladakibahin.maharashtra.gov.in/" target="_blank" class="btn-link portal-btn"><i class="fa-solid fa-globe"></i> Ladaki Bahin Portal</a>
+                <a href="https://wa.me/919503670092?text=मला लाडकी बहीण योजनेचा फॉर्म भरायचा आहे." target="_blank" class="btn-link apply-btn"><i class="fa-brands fa-whatsapp"></i> अर्ज करा</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title"><i class="fa-solid fa-hammer"></i> PM विश्वकर्मा योजना (रु. १५,००० टूलकिट व कर्ज)</div>
+            <div class="doc-box"><strong>लागणारी कागदपत्रे:</strong> आधार कार्ड, मोबाईल नंबर (आधार लिंक), बँक पासबुक, रेशन कार्ड.</div>
+            <div class="actions">
+                <a href="https://pmvishwakarma.gov.in/" target="_blank" class="btn-link portal-btn"><i class="fa-solid fa-globe"></i> Vishwakarma Portal</a>
+                <a href="https://wa.me/919503670092?text=मला विश्वकर्मा योजनेचा फॉर्म भरायचा आहे." target="_blank" class="btn-link apply-btn"><i class="fa-brands fa-whatsapp"></i> अर्ज करा</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title"><i class="fa-solid fa-city"></i> प्रधानमंत्री आवास योजना (घरकुल योजना)</div>
+            <div class="doc-box"><strong>लागणारी कागदपत्रे:</strong> आधार कार्ड, रेशन कार्ड, बँक पासbook, जागेची पाहणी / ७/१२, उत्पन्नाचा दाखला.</div>
+            <div class="actions">
+                <a href="https://pmaymis.gov.in/" target="_blank" class="btn-link portal-btn"><i class="fa-solid fa-globe"></i> PMAY Portal Link</a>
+                <a href="https://wa.me/919503670092?text=मला घरकुल योजनेची माहिती हवी आहे." target="_blank" class="btn-link apply-btn"><i class="fa-brands fa-whatsapp"></i> माहिती मिळवा</a>
+            </div>
+        </div>
+
+        <!-- ================= SECTION 5: STUDENT CORNER ================= -->
+        <div class="section-header"><i class="fa-solid fa-graduation-cap"></i> ५. विद्यार्थी कॉर्नर व शैक्षणिक फॉर्म्स</div>
+
+        <div class="card">
+            <div class="card-title"><i class="fa-solid fa-award"></i> महाडीबीटी शिष्यवृत्ती फॉर्म (MahaDBT Scholarship)</div>
+            <div class="doc-box"><strong>लागणारी कागदपत्रे:</strong> आधार कार्ड, जातीचा दाखला, उत्पन्नाचा दाखला, मार्कशीट, कॉलेज बोनाफाईड/पावती, बँक पासबुक.</div>
+            <div class="actions">
+                <a href="https://mahadbt.maharashtra.gov.in/" target="_blank" class="btn-link portal-btn"><i class="fa-solid fa-globe"></i> MahaDBT Portal Link</a>
+                <a href="https://wa.me/919503670092?text=मला स्कॉलरशिपचा फॉर्म भरायचा आहे." target="_blank" class="btn-link apply-btn"><i class="fa-brands fa-whatsapp"></i> फॉर्म भरा</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title"><i class="fa-solid fa-school"></i> SSC / HSC निकाल, हॉल तिकीट व पुनर्मुल्यांकन</div>
+            <div class="doc-box"><strong>माहिती:</strong> १० वी व १२ वी निकाल ऑनलाईन पाहणे व प्रिंट काढणे.</div>
+            <div class="actions">
+                <a href="https://mahresult.nic.in/" target="_blank" class="btn-link portal-btn"><i class="fa-solid fa-globe"></i> Result Portal Link</a>
+                <a href="https://wa.me/919503670092?text=मला निकाल तपासायचा आहे." target="_blank" class="btn-link apply-btn"><i class="fa-brands fa-whatsapp"></i> निकाल तपासा</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title"><i class="fa-solid fa-briefcase"></i> शासकीय भरती व स्पर्धा परीक्षा फॉर्म्स (MPSC/Polis Bharathi)</div>
+            <div class="doc-box"><strong>लागणारी कागदपत्रे:</strong> आधार, फोटो, सही, शैक्षणिक गुणपत्रके, डोमिसिल, जात प्रमाणपत्र.</div>
+            <div class="actions">
+                <a href="https://mpsconline.gov.in/" target="_blank" class="btn-link portal-btn"><i class="fa-solid fa-globe"></i> MPSC Portal Link</a>
+                <a href="https://wa.me/919503670092?text=मला नोकरीचा/भरतीचा फॉर्म भरायचा आहे." target="_blank" class="btn-link apply-btn"><i class="fa-brands fa-whatsapp"></i> फॉर्म भरा</a>
+            </div>
+        </div>
+
+        <!-- ================= SECTION 6: CONTACT ================= -->
+        <div class="contact-box">
+            <h3 style="color: var(--primary); text-align: center; margin-bottom: 15px;">🏪 गुरुदत्त उद्योग समूह - संपर्क व केंद्र माहिती</h3>
+            <div class="contact-row"><i class="fa-solid fa-user"></i> <strong>संचालक:</strong> Abhay Thombare</div>
+            <div class="contact-row"><i class="fa-solid fa-location-dot"></i> <strong>पत्ता:</strong> Pimpalsuti Nhavara Road, Near Hotel SP, Tal: Shirur, Dist: Pune - 412210</div>
+            <div class="contact-row"><i class="fa-solid fa-phone"></i> <strong>संपर्क:</strong> 7058740092 / 9503670092</div>
+            <div class="contact-row"><i class="fa-solid fa-envelope"></i> <strong>ई-मेल:</strong> royalbusiness0092@gmail.com</div>
+        </div>
+
+    </div>
+
+    <!-- Fixed Footer Bar -->
+    <div class="fixed-footer">
+        <a href="tel:+917058740092" class="footer-btn"><i class="fa-solid fa-phone" style="font-size: 18px; color:#1e3c72;"></i> Call Us</a>
+        <a href="https://wa.me/919503670092" target="_blank" class="footer-btn"><i class="fa-brands fa-whatsapp" style="font-size: 18px; color:#25d366;"></i> WhatsApp</a>
+        <a href="#" class="footer-btn"><i class="fa-solid fa-arrow-up" style="font-size: 18px; color:#ff5722;"></i> Top</a>
+    </div>
+
+</body>
+                  </html>
+                  
